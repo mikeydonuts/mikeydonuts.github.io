@@ -1,0 +1,367 @@
+
+body {
+  background: #fff;
+  color: #222;
+}
+
+.container {
+  margin: 10rem 0 0 4rem;
+  width: 500px;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  line-height: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 400;
+  border-bottom: 1px solid #ccc;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #777;
+  text-decoration-style: italic;
+}
+
+p {
+  margin: 40px auto 0;
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.rolling-donut-container {
+  overflow: hidden;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  height: 130px;
+  border: 0px solid #ccc;
+  width: 100%;
+}
+
+.rolling-donut {
+  width: 200px;
+  height: 230px;
+  position: absolute;
+  animation: roller 16000ms infinite linear;
+}
+
+@keyframes roller {
+  0%  { left: -100px; }
+  80%  { left: -100px; }
+  100%{ left: 100%; }
+}
+
+.rolling-donut.small {
+  width: 100px;
+  height: 115px;
+}
+
+.rolling-donut.large {
+  width: 400px;
+  height: 460px;
+}
+
+.donut {
+  width: 100%;
+  height: 87%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  background-color: #E4D998;
+  box-shadow: inset -20px -10px 0 #d4d292;
+  animation: bouncer 4000ms infinite linear;
+}
+
+.large .donut {
+  box-shadow: inset -35px -20px 0 #d4d292;
+}
+
+.small .donut {
+  box-shadow: inset -7px -3px 0 #d4d292;
+}
+
+@keyframes bouncer {
+  0%  { height: 87%; }
+  25% { height: 87%; }
+  30% { height: 84.5%; bottom: 0%; }
+  35% { height: 87%; bottom: 15%; }
+  40% { bottom: 0%; }
+  42% { height: 84.5%; }
+  45% { height: 87%; bottom: 2.5%; }
+  48% { height: 84.5%; bottom: 0%; }
+  51% { height: 87%; }
+  80% { height: 87%; }
+  100%{ height: 87%; }
+}
+
+.frosting-part-1 {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  background: #682F07;
+  width: 80%;
+  height: 80%;
+  margin-left: -50%;
+  border-radius: 38%;
+  animation: drift 2000ms infinite linear;
+}
+
+.frosting-part-2 {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  background: #682F07;
+  width: 78%;
+  height: 78%;
+  margin-left: -50%;
+  border-radius: 18% 28% 32% 21%;
+  transform: rotate(45deg);
+  animation: drifting 2000ms infinite linear;
+}
+
+.donut-hole {
+  position: absolute;
+  top: 37%;
+  left: 40%;
+  background: #fff;
+  width: 16%;
+  height: 25%;
+  border-radius: 50%;
+  animation: bouncer-helper 4000ms infinite linear;
+}
+
+.inside-wall {
+  position: absolute;
+  top: 37%;
+  left: 34%;
+  background: #E4D998;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  animation: bouncer-helper 4000ms infinite linear;
+}
+
+@keyframes bouncer-helper {
+  0%  { height: 25%; }
+  25% { height: 25%; }
+  30% { height: 23%; }
+  35% { height: 25%; }
+  40% { height: 25%; }
+  42% { height: 23%; }
+  45% { height: 25%; }
+  80% { height: 25%; }
+  100%{ height: 25%; }
+}
+
+.inside-wall-shadow {
+  position: absolute;
+  top: 33%;
+  left: 26%;
+  background: #333;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  opacity: .2;
+}
+
+.cover-up {
+  position: absolute;
+  top: 37%;
+  left: 48%;
+  background: #682F07;
+  width: 13%;
+  height: 25%;
+}
+
+.inside-waves {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  animation: drift 2000ms infinite linear;
+}
+
+.wave-one {
+  width: 25%;
+  height: 27%;
+  border-radius: 50%;
+  background-color: #682F07;
+  position: absolute;
+  top: 42%;
+}
+
+.wave-two {
+  width: 25%;
+  height: 26%;
+  border-radius: 50%;
+  background-color: #682F07;
+  position: absolute;
+  top: 41%;
+  left: 75%;
+}
+
+.wave-three {
+  width: 70%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: #682F07;
+  position: absolute;
+  top: 76%;
+  left: 20%;
+}
+
+.ripples {
+  position: absolute;
+  width: 87%;
+  height: 87%;
+  animation: drift 2000ms infinite linear;
+}
+
+.ripple-one {
+  width: 17%;
+  height: 6%;
+  border-radius: 50%;
+  background-color: #682F07;
+  position: absolute;
+  top: 48%;
+  left: 4%;
+}
+
+.ripple-two {
+  width: 18.5%;
+  height: 4%;
+  border-radius: 50%;
+  background-color: #682F07;
+  position: absolute;
+  top: 48%;
+  left: 77%;
+}
+
+.ripple-three {
+  width: 18.5%;
+  height: 4%;
+  border-radius: 50%;
+  background-color: #682F07;
+  position: absolute;
+  top: 54%;
+  left: 77%;
+}
+
+.ripple-four {
+  width: 3%;
+  height: 14%;
+  border-radius: 50%;
+  background-color: #682F07;
+  position: absolute;
+  top: 80%;
+  left: 48%;
+}
+
+.container-upper-shine {
+  width: 87%;
+  height: 87%;
+  position: absolute;
+  animation: shine-rotator 4000ms infinite linear;
+}
+
+.container-lower-shine {
+  width: 44%;
+  height: 44%;
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  animation: shine-rotator 4000ms infinite linear;
+}
+
+@keyframes shine-rotator {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(25deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.upper-shine {
+  width: 45%;
+  height: 65%;
+  position: absolute;
+  top: 11%;
+  left: 8%;
+  border-radius: 50%;
+  box-shadow: inset 40px 5px 0 -25px #fff;
+  opacity: .1;
+  transform: rotate(27deg);
+}
+
+.small .upper-shine {
+  box-shadow: inset 31px 5px 0 -25px #fff;
+}
+
+.lower-shine {
+  width: 31%;
+  height: 53%;
+  position: absolute;
+  top: 53%;
+  left: 63%;
+  border-radius: 50%;
+  box-shadow: inset -13px -1px 0 -5px #fff;
+  opacity: .1;
+  transform: rotate(27deg);
+}
+
+.small .lower-shine {
+  box-shadow: inset -9px -1px 0 -5px #fff;
+}
+
+.donut-shadow {
+  background: #000;
+  opacity: .1;
+  width: 75%;
+  height: 12%;
+  border-radius: 50%;
+  bottom: -5%;
+  left: 12%;
+  position: absolute;
+  animation: shadow-bouncer 4000ms infinite linear;
+}
+
+@keyframes shadow-bouncer{
+  0%  { width: 75%; }
+  25% { width: 75%; left: 12%; }
+  30% { width: 80%; left: 10%; }
+  35% { width: 67%; left: 16%; }
+  40% { width: 75%; left: 12%; }
+  42% { width: 71%; left: 14%; }
+  45% { width: 75%; left: 12%; }
+  80% { width: 75%; }
+  100%{ width: 75%; }
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes drifting {
+  from { transform: rotate(45deg); }
+  to { transform: rotate(405deg); }
+}
+
+
+
+
+
+
+
+
