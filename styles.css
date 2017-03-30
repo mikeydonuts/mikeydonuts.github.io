@@ -5,8 +5,8 @@ body {
 }
 
 .container {
-  margin: 10rem 0 0 4rem;
-  width: 500px;
+  padding: 8rem 0rem 0rem 4rem;
+  width: 40%;
 }
 
 h1 {
@@ -357,6 +357,20 @@ p {
   from { transform: rotate(45deg); }
   to { transform: rotate(405deg); }
 }
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 1000px) {
+
+  .container {
+    width: 80%;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+}
+
+
 
 
 
