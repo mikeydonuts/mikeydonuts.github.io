@@ -368,6 +368,18 @@ p {
     padding-left: 10%;
   }
 
+  h1 {
+    font-size: 72px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 36px;
+  }
+
 }
 
 
