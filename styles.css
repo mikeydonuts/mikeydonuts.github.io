@@ -52,12 +52,12 @@ p {
   width: 200px;
   height: 230px;
   position: absolute;
-  animation: roller 16000ms infinite linear;
+  animation: roller 8000ms infinite linear;
 }
 
 @keyframes roller {
   0%  { left: -100px; }
-  80%  { left: -100px; }
+  30%  { left: -100px; }
   100%{ left: 100%; }
 }
 
